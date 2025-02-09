@@ -12,3 +12,14 @@ class Solution:
                 dp[i][j] = max(1, min_health)
 
         return dp[0][0]
+
+# Testando os casos informados
+solution = Solution()
+
+# Caso 1:
+dungeon1 = [[-2, -3, 3], [-5, -10, 1], [10, 30, -5]]
+print(solution.calculateMinimumHP(dungeon1))  # Output esperado: 7
+
+# Caso 2:
+dungeon2 = [[0]]
+print(solution.calculateMinimumHP(dungeon2))  # Output esperado: 1

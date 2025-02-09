@@ -13,20 +13,18 @@
 Esse projeto tem como objetivo armazenar as resoluções feitas dos seguintes exercícios do LeetCode:
 
 - (Medium) - 
-- (Hard) - [#174. Dangeon Game](https://leetcode.com/problems/dungeon-game/description/?envType=problem-list-v2&envId=dynamic-programming)
-- (Hard) - [#1235. Maximum Profit in Job Scheduling](https://leetcode.com/problems/course-schedule-iii/description/)
+- (Hard) - [#174. Dungeon Game](https://leetcode.com/problems/dungeon-game/description/?envType=problem-list-v2&envId=dynamic-programming)
+- (Hard) - [#1235. Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/)
 
 ## Screenshots
 
-#174. Dangeon Game
+#174. Dungeon Game
 
 ![174](img/174.png)
 
 #1235. Maximum Profit in Job Scheduling
 
 ![1235](img/1235.png)
-
-
 
 ## Instalação 
 **Linguagem**: Python3<br>
