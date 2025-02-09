@@ -1,45 +1,46 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# LeetCode Problems - PD
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 26<br>
+**Conteúdo da Disciplina**: Programação Dinâmica<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 211031575  |  Ana Karoliny de Souza Cavalcanti |
+| 211031056  |  Guilherme de Sá Gonçalves |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Esse projeto tem como objetivo armazenar as resoluções feitas dos seguintes exercícios do LeetCode:
+
+- (Medium) - 
+- (Hard) - [#174. Dangeon Game](https://leetcode.com/problems/dungeon-game/description/?envType=problem-list-v2&envId=dynamic-programming)
+- (Hard) - [#1235. Maximum Profit in Job Scheduling](https://leetcode.com/problems/course-schedule-iii/description/)
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+#174. Dangeon Game
+
+![174](img/174.png)
+
+#1235. Maximum Profit in Job Scheduling
+
+![1235](img/1235.png)
+
+
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python3<br>
+
+No caso, basta fazer uma conta no LeetCode, e ir no problema e copiar o código na resolução e testar. 
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Porém caso não queira testar pelo LeetCode, basta clonar o repositório e rodar o arquivo com o nome do número do exercício, foram setados os mesmos exemplos de inputs que constam na descrição do problema.
 
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Copiamos os problemas para o repositório, caso não queria abrir o LeetCode e queira ler a descrição do problema, clique [AQUI!!!](Problemas.md)
 
+## Vídeos
 
+[Explicação Trabalho (Drive)]()
 
-
+[Explicação Trabalho (YouTube)]()
