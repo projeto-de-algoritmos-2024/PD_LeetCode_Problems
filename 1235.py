@@ -3,30 +3,36 @@ from typing import List
 
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        # Combine startTime, endTime, and profit into a list of jobs
-        jobs = sorted(zip(startTime, endTime, profit), key=lambda x: x[1])
+        # Combine startTime, endTime, e profit em uma lista "jobs" ordenados pelo horário de término
+        trabalhos = sorted(zip(startTime, endTime, profit), key=lambda x: x[1])
         
-        # Extract sorted endTimes
-        endTimes = [job[1] for job in jobs]
+        # Extraímos os horários de término para facilitar uma busca posteriormente
+        endTimes = [job[1] for job in trabalhos]
         
-        # Initialize dp array
-        dp = [0] * (len(jobs) + 1)
+        # Inicializamos o vetor que aplicaremos a programação dinâmica, não faremos recursivo, e sim iterativo 
+        vetor_PD = [0] * (len(trabalhos) + 1)
         
-        for i in range(1, len(jobs) + 1):
-            # Find the latest job that doesn't conflict with jobs[i-1]
-            start = jobs[i-1][0]
-            last_non_conflict = bisect_right(endTimes, start) - 1
+        # Passaremos por todos os trabalhos
+        for i in range(1, len(trabalhos) + 1):
+            # Encontraremos o último trabalho compatível, nossa função "p(i)"
+            start = trabalhos[i-1][0]
+
+            # Encontramos o maior índice j tal que endTime[j] <= startTime[i]
+            ultimo_sem_conflito = bisect_right(endTimes, start) - 1 # 
             
-            # Calculate the profit if we include the current job
-            profit_including_current = jobs[i-1][2] + (dp[last_non_conflict + 1] if last_non_conflict != -1 else 0)
+            # Calculando o lucro se "Levar"
+            # Se pegarmos esse trabalho, o lucro será o lucro do trabalho atual + lucro acumulado do último trabalho compatível.
+            Levar = trabalhos[i-1][2] + (vetor_PD[ultimo_sem_conflito + 1] if ultimo_sem_conflito != -1 else 0)
             
-            # Calculate the profit if we exclude the current job
-            profit_excluding_current = dp[i-1]
+            # Calculando o lucro de "Não Levar"
+            # Se não pegarmos o trabalho atual, o lucro será o mesmo do caso anterior.
+            Nao_Levar = vetor_PD[i-1]
             
-            # Choose the maximum profit
-            dp[i] = max(profit_including_current, profit_excluding_current)
+            # Escolhendo o maior entre eles
+            vetor_PD[i] = max(Levar, Nao_Levar)
         
-        return dp[-1]
+        # O último valor do vetor contém o lucro máximo possível escolhendo os trabalhos compatíveis
+        return vetor_PD[-1]
 
 
 # Exemplo de uso
