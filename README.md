@@ -12,11 +12,15 @@
 ## Sobre 
 Esse projeto tem como objetivo armazenar as resoluções feitas dos seguintes exercícios do LeetCode:
 
-- (Medium) - 
+- (Medium) - [#64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/description/)
 - (Hard) - [#174. Dungeon Game](https://leetcode.com/problems/dungeon-game/description/?envType=problem-list-v2&envId=dynamic-programming)
 - (Hard) - [#1235. Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/)
 
 ## Screenshots
+
+#64. Minimum Path Sum
+
+![64](img/64.png)
 
 #174. Dungeon Game
 

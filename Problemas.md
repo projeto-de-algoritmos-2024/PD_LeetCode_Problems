@@ -1,14 +1,39 @@
 # LeetCode Problems
 
 ## Sumário
-1. 
+1. [#64. Minimum Path Sum](#64-minimum-path-sum-)
 
 2. [#174. Dungeon Game](#174-dungeon-game-)
 
 3. [#1235. Maximum Profit in Job Scheduling](#1235-maximum-profit-in-job-scheduling-)
 
-##  🔶
+## #64. Minimum Path Sum 🔶
 
+Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
+
+Note: You can only move either down or right at any point in time.
+
+**Exemple 1:**
+
+![64](img/ex1_64.png)
+
+**Input:** grid = [[1,3,1],[1,5,1],[4,2,1]]
+
+**Output:** 7
+
+**Explanation:** Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
+
+**Example 2:**
+
+**Input:**  grid = [[1,2,3],[4,5,6]]
+
+**Output:** 12
+
+## Como resolvemos?
+
+Como fizemos esse depois do #174 da dungeon, vimos que eram muito parecidos, porém com um detalhe, não havia valores negativos, então acreditamos ser mais fácil, o que de fato foi.
+
+Diferente do #174, decidimos fazer as alterações na própria matriz, para não gastar memória demasiada, e uma vez a matriz inicializada, fazemos a pergunta "É melhor pegar, o menor, o valor à esquerda ou o de cima?", lembrando sempre de somar com o valor da célula atual. Ao final, teremos exatamente a menor soma inde de (0,0) ao canto inferior direito.
 
 ## #174. Dungeon Game 🔴
 
@@ -26,7 +51,7 @@ Note that any room can contain threats or power-ups, even the first room the kni
 
 **Exemple 1:**
 
-![174](img/exemplo1-174.jpg)
+![174](img/ex1_174.jpg)
 
 **Input:** dungeon = [[-2,-3,3],[-5,-10,1],[10,30,-5]]
 
@@ -38,7 +63,7 @@ Note that any room can contain threats or power-ups, even the first room the kni
 
 **Input:** dungeon = [[0]]
 
-**Output: 1**
+**Output:** 1
 
 ## Como resolvemos?
 
