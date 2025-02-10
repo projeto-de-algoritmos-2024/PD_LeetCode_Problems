@@ -144,3 +144,17 @@ Profit obtained 150 = 20 + 70 + 60.
 **Output:** 6
 
 ## Como resolvemos?
+
+Utilizamos o algoritmo Weighted Interval Scheduling com Programação Dinâmica e busca binária para resolver este problema.
+
+O problema #1235 (Maximum Profit in Job Scheduling) envolve uma abordagem de ordenação dos trabalhos pelo tempo de término. De forma sintetizada, ele resolve o problema de maximizar o lucro na programação de trabalhos (jobs) que possuem início e fim específico.
+
+Em princípio, os trabalhos são organizados em ordem crescente, pelo horário de fim. Aí, então, para cada trabalho, é feita uma busca ao último trabalho que termina antes que comece o trabalho atual. Para isso, há a função bisect_right, garantindo que os trabalhos selecionados não se sobreponham.
+
+A partir dessa informação, o algoritmo irá calcular o lucro máximo de duas maneiras:
+
+	1. Levar: Considerando o trabalho atual (lucro do trabalho atual + máximo do últio trabalho compatível);
+    
+	2. Não Levar: Ignorando o trabalho atual (mantém o lucro acumulado até o trabalho anterior).
+
+É armazenado junto ao algoritmo o lucro máximo acumulado em vetor_PD, garantindo que, ao final, o último valor possua o lucro máximo possível ao ser selecionado os trabalhos mais rentáveis e compatíveis.
