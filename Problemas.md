@@ -3,7 +3,7 @@
 ## Sumário
 1. 
 
-2. [#174. Dungeon Game](#174-dangeon-game-)
+2. [#174. Dungeon Game](#174-dungeon-game-)
 
 3. [#1235. Maximum Profit in Job Scheduling](#1235-maximum-profit-in-job-scheduling-)
 
@@ -42,7 +42,43 @@ Note that any room can contain threats or power-ups, even the first room the kni
 
 ## Como resolvemos?
 
+Pensamos inicialmente que a abordagem do menor caminho em um grafo poderia solucionar o problema, porém como tínhamos basicamente dois movimentos possíveis, direita ou baixo, decidimos trabalhar na própra matriz da dungeon.
 
+Basicamente queremos o HP mínimo para o cavaleiro cruzar a dungeon, partindo da posição (0, 0), para o final, e para ele sair ele tem que ter pelo menos 1 de vida. Então iniciamos uma matriz onde guardaria os valores mínimos da vida do cavaleiro, sendo que as bordas teriam que ter pelo menos 1. E assim, indo de trás para frente, pegávamos o mínimo entre ir para direita e ir para baixo, e depois subtraíamos o valor da célula da dungeon.
+
+Com isso a gente conseguiria colocar na matriz de vida, o HP mínimo de cada célula. Um exemplo prático para entender melhor:
+
+Dungeon:
+```bash
+[[-2, -3, 3], 
+[-5, -10, 1], 
+[10, 30, -5]]
+```
+matriz_PD no começo:
+```bash
+inf   inf   inf   inf
+inf   inf   inf   inf
+inf   inf   inf   1
+inf   inf   1     inf
+```
+```bash
+Célula (2,2) - saída:
+Custo -5
+matriz_PD [2][3] = 1 (direita)
+matriz_PD [3][2] = 1 (baixo)
+```
+Cálculo:
+min(1, 1) - (-5) = 6
+```bash
+Matriz_PD atualizada:
+inf   inf   inf   inf
+inf   inf   inf   inf
+inf   inf   6     1
+inf   inf   1     inf
+```
+Ou seja, o valor de HP mímino qque o cavaleiro precisa ter ao chegar na saída, é 6.
+
+E assim continuamos preenchendo a Matriz_PD.
 
 ## #1235. Maximum Profit in Job Scheduling 🔴
 
