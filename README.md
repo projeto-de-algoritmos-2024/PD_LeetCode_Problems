@@ -43,6 +43,6 @@ Copiamos os problemas para o repositório, caso não queria abrir o LeetCode e q
 
 ## Vídeos
 
-[Explicação Trabalho (Drive)]()
+[Explicação Trabalho (Drive)](https://drive.google.com/file/d/1cJS7QD52NOsUaK1bMXODtZccqD5vZlkn/view?usp=sharing)
 
-[Explicação Trabalho (YouTube)]()
+[Explicação Trabalho (YouTube)](https://youtu.be/iWHOissxjBQ)
