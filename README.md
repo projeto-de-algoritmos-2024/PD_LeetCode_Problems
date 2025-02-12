@@ -1,6 +1,6 @@
 # LeetCode Problems - PD
 
-**Número da Lista**: 26<br>
+**Número da Lista**: 29<br>
 **Conteúdo da Disciplina**: Programação Dinâmica<br>
 
 ## Alunos
